@@ -35,7 +35,7 @@
       type="text"
       name="title"
       required
-      value="{{ input.title }}"
+      value="{% match input.title %}{% when Some with (val) %}{{ val }}{% when None %}{% endmatch %}"
       class="rounded py-1.5 px-3 mt-2 bg-neutral-900"
     />
 

@@ -136,7 +136,7 @@ async fn get_create(
         input: CreateBookmark {
             parents: Vec::new(),
             url: query.url.unwrap_or_default(),
-            title: query.title.unwrap_or_default(),
+            title: query.title,
             ..Default::default()
         },
         selected_parents: selected_parent.into_iter().collect(),
